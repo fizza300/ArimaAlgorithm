@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Arima Algorithm Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav{
+    box-sizing: border-box;
+    border: 3px solid rgb(15, 30, 92);
+    background-color: #a7d6f8;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+}
+
+nav h2{
+    margin-left: 10%;
+    cursor: pointer;
+    color: #000;
+}
+
+nav h2 span{
+    font-style: italic;
+    color: rgb(45, 34, 148);
+}
+
+nav ul{
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 10px 20pdx;
+    padding: 4px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+nav ul li a:hover{
+    padding: 12px;
+    background-color:  #a7d6f8;
+    transition: 1s;
+}
+
+nav .btn{
+    color: #000;
+    text-decoration: none;
+    margin-right: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-display: flex;
+    padding: 12px;
+    background-color:  #7ac1f4;
+    border: 2px solid   #0e1663;
+}
+        header {
+            background-color: #0f0569;
+            color: white;
+            text-align: center;
+            padding: 3rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .contact-info ul,
+        .social-media {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-info ul li,
+        .social-media li {
+            margin-bottom: 1rem;
+        }
+        .social-media a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .social-media a:hover {
+            color: #007bff;
+        }
+        .contact-form {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .contact-form button {
+            background-color:#0f0569;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            
+            <h2 style="font: size 16px;font-style: bold;text-align: center;">ARIMA<span></span><br>ALGORITHM</h2>
+            <ul>
+                <li> <a class="btn" href="page4.html" target="_self">HOME</a></li>
+                <li><a class="btn" href="services.html" target="_self">SERVICES</a></li>
+                <li><a class="btn" href="about.html" target="_self">ABOUT</a></li>
+                <li><a class="btn" href="contact.html" target="_self">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header>
+        <h1>Contact Arima Algorithm Services</h1>
+        <p>Get in Touch with Us</p>
+    </header>
+    <div class="container">
+        <div class="contact-info">
+            <p>If you have any questions or inquiries, feel free to reach out to us:</p>
+            
+            <ul>
+                <li>Email: <a href="mailto:info@arima-algorithms.com">info@arima-algorithms.com</a></li>
+                <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            </ul>
+            
+            <p>Connect with us on social media:</p>
+            
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com/arima.algorithms" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/arima_algorithms" target="_blank">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/company/arima-algorithms" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/arima_algorithms" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="contact-form">
+            <h2>Send us a message</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

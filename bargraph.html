@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecasted Data Bar Chart</title>
+    <!-- Add Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Forecasted Data Bar Chart</h1>
+    <div id="chartContainer">
+        <canvas id="forecastChart" width="400" height="200" style="width: 100%; height: auto;"></canvas>
+    </div>
+
+    <script>
+        // Your data and chart creation code here...
+
+        const forecastData = [
+        { date: '4/21/2023', forecast: 60.31359202 },
+    { date: '4/22/2023', forecast: 66.28303971 },
+    { date: '4/23/2023', forecast: 47.42134807 },
+    { date: '4/24/2023', forecast: 59.2016615 },
+    { date: '4/25/2023', forecast: 59.62726585 },
+    { date: '4/26/2023', forecast: 53.23352286 },
+    { date: '4/27/2023', forecast: 58.04863343 },
+    { date: '4/28/2023', forecast: 57.54586292 },
+    { date: '4/29/2023', forecast: 55.46528438 },
+    { date: '4/30/2023', forecast: 57.36196741 },
+    { date: '5/1/2023', forecast: 56.93869551 },
+    { date: '5/2/2023', forecast: 56.2964813 },
+    { date: '5/3/2023', forecast: 57.01980729 },
+    { date: '5/4/2023', forecast: 56.78060211 },
+    { date: '5/5/2023', forecast: 56.59692732 },
+    { date: '5/6/2023', forecast: 56.86456436 },
+    { date: '5/7/2023', forecast: 56.74830958 },
+    { date: '5/8/2023', forecast: 56.70219418 },
+    { date: '5/9/2023', forecast: 56.79829251 },
+    { date: '5/10/2023', forecast: 56.74634849 },
+    { date: '5/11/2023', forecast: 56.73782203 },
+    { date: '5/12/2023', forecast: 56.77125015 },
+    { date: '5/13/2023', forecast: 56.74931629 },
+    { date: '5/14/2023', forecast: 56.74939334 },
+    { date: '5/15/2023', forecast: 56.76061333 },
+    { date: '5/16/2023', forecast: 56.75173985 },
+    { date: '5/17/2023', forecast: 56.75295575 },
+    { date: '5/18/2023', forecast: 56.75656209 },
+    { date: '5/19/2023', forecast: 56.75309736 },
+    { date: '5/20/2023', forecast: 56.7539705 }
+        ];
+
+        // Extract dates and forecasts from the data
+        const dates = forecastData.map(entry => entry.date);
+        const forecasts = forecastData.map(entry => entry.forecast);
+
+        // Get canvas element
+        const canvas = document.getElementById('forecastChart');
+
+        // Create a bar chart
+        const ctx = canvas.getContext('2d');
+        const forecastChart = new Chart(ctx, {
+            type: 'bar', // Change the chart type to 'bar'
+            data: {
+                labels: dates,
+                datasets: [{
+                    label: 'Forecasted Data',
+                    data: forecasts,
+                    backgroundColor: 'blue',
+                    borderColor: 'blue',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        type: 'category',
+                        title: {
+                            display: true,
+                            text: 'Date'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Forecast'
+                        }
+                    }
+                }
+            }
+        });
+    
+    </script>
+</body>
+</html>
